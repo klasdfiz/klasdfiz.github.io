@@ -309,6 +309,8 @@
 <p>1) install the lua env.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install liblua5.1-0-dev</div></pre></td></tr></table></figure></p>
 <p>2) install the mysql-proxy<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install mysql-proxy</div></pre></td></tr></table></figure></p>
 <p>3) start mysql-proxy<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql-proxy --proxy-address=your_ip:your_port --proxy-backend-addresses=your_mysql_server_addresses --proxy-lua-script=/usr/share/mysql-proxy/rw-splitting.lua --admin-username=your_name --admin-password=your_password --admin-lua-script=/usr/share/mysql-proxy/admin.lua</div></pre></td></tr></table></figure></p>
+<p>==========</p>
+<p>update: 今天仓促地post了这篇，然后我的站点就挂掉了，不清楚是什么问题，调了几个小时依旧不能解决，考虑到之前博文有备份，索性rebuild了整个bog，我这种解法也是蛮暴力的+_+</p>
 
           
         
