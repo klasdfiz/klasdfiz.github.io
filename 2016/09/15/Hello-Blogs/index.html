@@ -84,15 +84,40 @@
 
 
 
-<meta name="description" content="Learn it!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KZBlogs">
-<meta property="og:url" content="https://klasdfiz.github.io/index.html">
+<meta name="description" content="Hexo+github博客搭建成功，以后就往这里发博文了^_^，开博先来一篇搭建的过程，记录下方便以后查阅。PS：之前的博客地址是http://blog.csdn.net/scanf5288
+工具
+node.js
+git
+github账户
+duoshuo账户
+macOS
+
+安装Hexohexo是一个基于node.js的简便、功能强劲的博客框架。Nodejs的安装是傻瓜式地点下一步即可。安装后，其包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello Blogs">
+<meta property="og:url" content="https://klasdfiz.github.io/2016/09/15/Hello-Blogs/index.html">
 <meta property="og:site_name" content="KZBlogs">
-<meta property="og:description" content="Learn it!">
+<meta property="og:description" content="Hexo+github博客搭建成功，以后就往这里发博文了^_^，开博先来一篇搭建的过程，记录下方便以后查阅。PS：之前的博客地址是http://blog.csdn.net/scanf5288
+工具
+node.js
+git
+github账户
+duoshuo账户
+macOS
+
+安装Hexohexo是一个基于node.js的简便、功能强劲的博客框架。Nodejs的安装是傻瓜式地点下一步即可。安装后，其包">
+<meta property="og:updated_time" content="2016-11-10T13:34:19.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KZBlogs">
-<meta name="twitter:description" content="Learn it!">
+<meta name="twitter:title" content="Hello Blogs">
+<meta name="twitter:description" content="Hexo+github博客搭建成功，以后就往这里发博文了^_^，开博先来一篇搭建的过程，记录下方便以后查阅。PS：之前的博客地址是http://blog.csdn.net/scanf5288
+工具
+node.js
+git
+github账户
+duoshuo账户
+macOS
+
+安装Hexohexo是一个基于node.js的简便、功能强劲的博客框架。Nodejs的安装是傻瓜式地点下一步即可。安装后，其包">
 
 
 
@@ -113,10 +138,10 @@
 
 
 
-  <link rel="canonical" href="https://klasdfiz.github.io/"/>
+  <link rel="canonical" href="https://klasdfiz.github.io/2016/09/15/Hello-Blogs/"/>
 
 
-  <title> KZBlogs </title>
+  <title> Hello Blogs | KZBlogs </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -137,9 +162,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -210,9 +233,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -232,255 +255,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/11/10/mysql-proxy-installation/" itemprop="url">
-                  mysql-proxy installation
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-10T15:56:50+08:00" content="2016-11-10">
-              2016-11-10
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/环境配置/" itemprop="url" rel="index">
-                    <span itemprop="name">环境配置</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/10/mysql-proxy-installation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/10/mysql-proxy-installation/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>os: ubuntu 13.04 amd64</li>
-</ul>
-<p>1) install the lua env.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install liblua5.1-0-dev</div></pre></td></tr></table></figure></p>
-<p>2) install the mysql-proxy<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install mysql-proxy</div></pre></td></tr></table></figure></p>
-<p>3) start mysql-proxy<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql-proxy --proxy-address=your_ip:your_port --proxy-backend-addresses=your_mysql_server_addresses --proxy-lua-script=/usr/share/mysql-proxy/rw-splitting.lua --admin-username=your_name --admin-password=your_password --admin-lua-script=/usr/share/mysql-proxy/admin.lua</div></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/11/02/Ubuntu低版本更新源/" itemprop="url">
-                  Ubuntu低版本更新源
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-02T22:30:26+08:00" content="2016-11-02">
-              2016-11-02
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/环境配置/" itemprop="url" rel="index">
-                    <span itemprop="name">环境配置</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/11/02/Ubuntu低版本更新源/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/02/Ubuntu低版本更新源/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>由于很多原型系统都是在低版本的linux上研发的，所以经常需要用到这些老古董，但是很多源都已经不支持在线安装和更新了，因此google到了一份支持老版本的更新源，备份下。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">/etc/apt/sources.list</div><div class="line"></div><div class="line">deb http://old-releases.ubuntu.com/ubuntu/ raring main universe restricted multiverse</div><div class="line">deb-src http://old-releases.ubuntu.com/ubuntu/ raring main universe restricted multiverse</div><div class="line"></div><div class="line">deb http://old-releases.ubuntu.com/ubuntu/ raring-security main universe restricted multiverse</div><div class="line">deb-src http://old-releases.ubuntu.com/ubuntu/ raring-security main universe restricted multiverse</div><div class="line"></div><div class="line">deb http://old-releases.ubuntu.com/ubuntu/ raring-updates main universe restricted multiverse</div><div class="line">deb-src http://old-releases.ubuntu.com/ubuntu/ raring-updates main universe restricted multiverse</div><div class="line"></div><div class="line">deb http://old-releases.ubuntu.com/ubuntu/ raring-backports main restricted universe multiverse</div><div class="line">deb-src http://old-releases.ubuntu.com/ubuntu/ raring-backports main restricted universe multiverse</div><div class="line"></div><div class="line">deb http://old-releases.ubuntu.com/ubuntu/ raring-proposed main restricted universe multiverse</div><div class="line">deb-src http://old-releases.ubuntu.com/ubuntu/ raring-proposed main restricted universe multiverse</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/09/15/Hello-Blogs/" itemprop="url">
-                  Hello Blogs
-                </a>
+                Hello Blogs
               
             
           </h1>
@@ -546,9 +321,7 @@
       
 
       
-        
-          
-            <p>Hexo+github博客搭建成功，以后就往这里发博文了^_^，开博先来一篇搭建的过程，记录下方便以后查阅。<br>PS：之前的博客地址是<a href="http://blog.csdn.net/scanf5288" target="_blank" rel="external">http://blog.csdn.net/scanf5288</a></p>
+        <p>Hexo+github博客搭建成功，以后就往这里发博文了^_^，开博先来一篇搭建的过程，记录下方便以后查阅。<br>PS：之前的博客地址是<a href="http://blog.csdn.net/scanf5288" target="_blank" rel="external">http://blog.csdn.net/scanf5288</a></p>
 <h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul>
 <li>node.js</li>
 <li>git</li>
@@ -603,16 +376,20 @@
 <li><a href="http://www.docin.com/p-732332535.html" target="_blank" rel="external">http://www.docin.com/p-732332535.html</a></li>
 </ol>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -620,19 +397,32 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/02/Ubuntu低版本更新源/" rel="prev" title="Ubuntu低版本更新源">
+                Ubuntu低版本更新源 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -640,6 +430,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/15/Hello-Blogs/"
+           data-title="Hello Blogs" data-url="https://klasdfiz.github.io/2016/09/15/Hello-Blogs/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -659,8 +457,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -723,6 +530,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#工具"><span class="nav-number">1.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装Hexo"><span class="nav-number">2.</span> <span class="nav-text">安装Hexo</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关联GitHub-Pages"><span class="nav-number">3.</span> <span class="nav-text">关联GitHub Pages</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于部署"><span class="nav-number">4.</span> <span class="nav-text">关于部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于主题themes"><span class="nav-number">5.</span> <span class="nav-text">关于主题themes</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#duoshuo评论模块"><span class="nav-number">6.</span> <span class="nav-text">duoshuo评论模块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插件推荐"><span class="nav-number">7.</span> <span class="nav-text">插件推荐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">8.</span> <span class="nav-text">References</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -826,6 +644,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
