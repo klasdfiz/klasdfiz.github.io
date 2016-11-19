@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="klasdfiz, Kang Zeng, KanzCoder">
+  <meta name="keywords" content="C++,函数指针,条件编译,">
 
 
 
@@ -84,15 +84,16 @@
 
 
 
-<meta name="description" content="A vegetable bird.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KanzCoder">
-<meta property="og:url" content="http://kangzeng.win/archives/index.html">
+<meta name="description" content="OK, 接着上一节的继续。上一节整理到“类中的数据共享机制”，这节就从对共享数据的保护开始吧。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++基础_0x01">
+<meta property="og:url" content="http://kangzeng.win/2016/11/19/C-基础-0x01/index.html">
 <meta property="og:site_name" content="KanzCoder">
-<meta property="og:description" content="A vegetable bird.">
+<meta property="og:description" content="OK, 接着上一节的继续。上一节整理到“类中的数据共享机制”，这节就从对共享数据的保护开始吧。">
+<meta property="og:updated_time" content="2016-11-19T14:27:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KanzCoder">
-<meta name="twitter:description" content="A vegetable bird.">
+<meta name="twitter:title" content="C++基础_0x01">
+<meta name="twitter:description" content="OK, 接着上一节的继续。上一节整理到“类中的数据共享机制”，这节就从对共享数据的保护开始吧。">
 
 
 
@@ -113,10 +114,10 @@
 
 
 
-  <link rel="canonical" href="http://kangzeng.win/archives/">
+  <link rel="canonical" href="http://kangzeng.win/2016/11/19/C-基础-0x01/">
 
 
-  <title> 归档 | KanzCoder </title>
+  <title> C++基础_0x01 | KanzCoder </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -137,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-archive">
+  <div class="container one-collumn sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -248,274 +249,233 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 7 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/19/C-基础-0x01/" itemprop="url">
-              
-                <span itemprop="name">C++基础_0x01</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-11-19T20:34:40+08:00" content="2016-11-19">
-          11-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/17/C-基础-0x00/" itemprop="url">
-              
-                <span itemprop="name">C++基础_0x00</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-11-17T21:05:03+08:00" content="2016-11-17">
-          11-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/17/用GTK-写点儿界面/" itemprop="url">
-              
-                <span itemprop="name">用GTK+写点儿界面</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-11-17T18:34:51+08:00" content="2016-11-17">
-          11-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/17/来点儿闲话/" itemprop="url">
-              
-                <span itemprop="name">来点儿闲话</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-11-17T18:25:42+08:00" content="2016-11-17">
-          11-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/10/mysql-proxy-installation/" itemprop="url">
-              
-                <span itemprop="name">mysql-proxy installation</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-11-10T15:56:50+08:00" content="2016-11-10">
-          11-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/02/Ubuntu低版本更新源/" itemprop="url">
-              
-                <span itemprop="name">Ubuntu低版本更新源</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-11-02T22:30:26+08:00" content="2016-11-02">
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/15/Hello-Blogs/" itemprop="url">
-              
-                <span itemprop="name">Hello Blogs</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-09-15T00:01:37+08:00" content="2016-09-15">
-          09-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                C++基础_0x01
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-19T20:34:40+08:00" content="2016-11-19">
+              2016-11-19
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/C-笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">C++笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/19/C-基础-0x01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/19/C-基础-0x01/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/19/C-基础-0x01/" class="leancloud_visitors" data-flag-title="C++基础_0x01">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>OK, 接着上一节的继续。上一节整理到“类中的数据共享机制”，这节就从对共享数据的保护开始吧。<br><a id="more"></a></p>
+<h1 id="对共享数据的保护"><a href="#对共享数据的保护" class="headerlink" title="对共享数据的保护"></a>对共享数据的保护</h1><hr>
+<ul>
+<li><p>常引用——<code>const 类型 &amp;变量名</code></p>
+<ul>
+<li>一般用户给函数当形参，此时该函数不能对实参进行破坏</li>
+</ul>
+</li>
+<li><p>常对象——<code>类名 const 对象名</code></p>
+<ul>
+<li>常对象必须进行初始化，且不能被更新；</li>
+<li>不能访问普通成员函数，只能访问常成员函数。</li>
+</ul>
+</li>
+<li><p>常成员函数</p>
+<ul>
+<li><code>返回值类型 函数名（参数列表） const;</code></li>
+<li>只能调用该类中用<code>const</code>修饰的成员函数，不可更新类的成员变量；</li>
+<li>常对象只能调用常成员函数；</li>
+<li><code>const</code>可以用于区分不同重载函数。</li>
+</ul>
+</li>
+<li><p>常数据成员</p>
+<ul>
+<li>任何成员函数均不可对该成员进行赋值；</li>
+<li>构造函数对其进行初始化，只可以通过初始化列表，e.g.：<code>A::A(int i) : a(i){}</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="函数指针与指针函数"><a href="#函数指针与指针函数" class="headerlink" title="函数指针与指针函数"></a>函数指针与指针函数</h1><hr>
+<ul>
+<li>指针函数： <code>void *fun();</code>即返回指针的函数。</li>
+<li><p>函数指针： <strong>用以处理参数与返回值形式均一致，而功能是不确定的一组函数，有两种声明与定义</strong></p>
+<ol>
+<li><p>形式一</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">T (*fun)(...); <span class="comment">//声明</span></div><div class="line">fun = FunctionName; <span class="comment">//赋值</span></div><div class="line">fun(); <span class="comment">//调用</span></div></pre></td></tr></table></figure>
+<p>e.g.:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> (*fun)();</div><div class="line">fun = A;</div><div class="line">fun();</div></pre></td></tr></table></figure>
+</li>
+<li><p>形式二</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">T</span> <span class="params">(*fun)</span><span class="params">(...)</span></span>;</div><div class="line">fun A = &amp;FunctionName;</div><div class="line">(*A)(...); <span class="comment">//相当于调用FunctionName()</span></div></pre></td></tr></table></figure>
+<p>e.g.:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*fun)</span><span class="params">()</span></span>;</div><div class="line">fun B = &amp;A;  <span class="comment">//相当于一种类型</span></div><div class="line">(*B)();  <span class="comment">//即 B();</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="条件编译指令"><a href="#条件编译指令" class="headerlink" title="条件编译指令"></a>条件编译指令</h1><hr>
+<ul>
+<li><p>作用：有效地防止头文件中的变量被重复定义</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> 标识符</span></div><div class="line">    ...</div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line">    ...</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> 标识符</span></div><div class="line">    ...</div><div class="line"><span class="meta">#<span class="meta-keyword">else</span></span></div><div class="line">    ...</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div></pre></td></tr></table></figure>
+</li>
+<li><p>e.g.:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//head.h </span></div><div class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> HEAD_H</span></div><div class="line">    <span class="meta">#<span class="meta-keyword">define</span> HEAD_H</span></div><div class="line">    ...</div><div class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></div><div class="line"></div><div class="line"><span class="comment">//file1.h</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"head.h"</span></span></div><div class="line"></div><div class="line"><span class="comment">//file2.h</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"head.h"</span></span></div><div class="line"></div><div class="line"><span class="comment">//main.h</span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"file1.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"file2.h"</span></span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><hr>
+<p>由于我是早些年先整理出的纸质文档，参考文献较多且当时没有标注，若构成侵权请在底下留言，我会进行删除。今天先整这么多了，goodnight:)</p>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag">#C++</a>
+          
+            <a href="/tags/函数指针/" rel="tag">#函数指针</a>
+          
+            <a href="/tags/条件编译/" rel="tag">#条件编译</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/17/C-基础-0x00/" rel="next" title="C++基础_0x00">
+                <i class="fa fa-chevron-left"></i> C++基础_0x00
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/11/19/C-基础-0x01/" data-title="C++基础_0x01" data-content="" data-url="http://kangzeng.win/2016/11/19/C-基础-0x01/">
+  <div class="ds-share-inline">
+    <ul class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -523,6 +483,13 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/19/C-基础-0x01/" data-title="C++基础_0x01" data-url="http://kangzeng.win/2016/11/19/C-基础-0x01/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -542,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Kang Zeng">
           <p class="site-author-name" itemprop="name">Kang Zeng</p>
@@ -611,6 +587,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#对共享数据的保护"><span class="nav-number">1.</span> <span class="nav-text">对共享数据的保护</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数指针与指针函数"><span class="nav-number">2.</span> <span class="nav-text">函数指针与指针函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件编译指令"><span class="nav-number">3.</span> <span class="nav-text">条件编译指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -714,11 +701,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
 
 
   
