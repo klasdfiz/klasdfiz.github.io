@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="C++,类,">
+  <meta name="keywords" content="C++,关键字,">
 
 
 
@@ -84,18 +84,16 @@
 
 
 
-<meta name="description" content="今天在网上看到有人非常耐心地对c++primer一书从第一章开始一节一节地写读书笔记，着实令我非常佩服。于是我就想着，也该是时候把平时记的一些东西归纳整理下，把它们归类存电子档起来，这样以后就不用翻阅纸质文档了。">
+<meta name="description" content="这一小节主要介绍C++中常见的几个比较重要的关键字，go">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++基础_0x00">
-<meta property="og:url" content="http://kangzeng.win/2016/11/17/C-基础-0x00/index.html">
+<meta property="og:title" content="C++基础_0x02">
+<meta property="og:url" content="http://kangzeng.win/2016/11/21/C-基础-0x02/index.html">
 <meta property="og:site_name" content="KanzCoder">
-<meta property="og:description" content="今天在网上看到有人非常耐心地对c++primer一书从第一章开始一节一节地写读书笔记，着实令我非常佩服。于是我就想着，也该是时候把平时记的一些东西归纳整理下，把它们归类存电子档起来，这样以后就不用翻阅纸质文档了。">
-<meta property="og:image" content="http://ww3.sinaimg.cn/large/a229b272jw1f9vfepdxd6j20lc06kq3g.jpg">
-<meta property="og:updated_time" content="2016-11-17T14:29:06.000Z">
+<meta property="og:description" content="这一小节主要介绍C++中常见的几个比较重要的关键字，go">
+<meta property="og:updated_time" content="2016-11-23T11:03:41.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++基础_0x00">
-<meta name="twitter:description" content="今天在网上看到有人非常耐心地对c++primer一书从第一章开始一节一节地写读书笔记，着实令我非常佩服。于是我就想着，也该是时候把平时记的一些东西归纳整理下，把它们归类存电子档起来，这样以后就不用翻阅纸质文档了。">
-<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/a229b272jw1f9vfepdxd6j20lc06kq3g.jpg">
+<meta name="twitter:title" content="C++基础_0x02">
+<meta name="twitter:description" content="这一小节主要介绍C++中常见的几个比较重要的关键字，go">
 
 
 
@@ -116,10 +114,10 @@
 
 
 
-  <link rel="canonical" href="http://kangzeng.win/2016/11/17/C-基础-0x00/">
+  <link rel="canonical" href="http://kangzeng.win/2016/11/21/C-基础-0x02/">
 
 
-  <title> C++基础_0x00 | KanzCoder </title>
+  <title> C++基础_0x02 | KanzCoder </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -272,7 +270,7 @@
             
             
               
-                C++基础_0x00
+                C++基础_0x02
               
             
           </h1>
@@ -284,8 +282,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-17T21:05:03+08:00" content="2016-11-17">
-              2016-11-17
+            <time itemprop="dateCreated" datetime="2016-11-21T19:16:45+08:00" content="2016-11-21">
+              2016-11-21
             </time>
           </span>
 
@@ -314,8 +312,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/17/C-基础-0x00/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/17/C-基础-0x00/" itemprop="commentsCount"></span>
+                <a href="/2016/11/21/C-基础-0x02/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/21/C-基础-0x02/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -325,7 +323,7 @@
 
           
           
-             <span id="/2016/11/17/C-基础-0x00/" class="leancloud_visitors" data-flag-title="C++基础_0x00">
+             <span id="/2016/11/21/C-基础-0x02/" class="leancloud_visitors" data-flag-title="C++基础_0x02">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -347,132 +345,98 @@
       
 
       
-        <p>今天在网上看到有人非常耐心地对c++primer一书从第一章开始一节一节地写读书笔记，着实令我非常佩服。于是我就想着，也该是时候把平时记的一些东西归纳整理下，把它们归类存电子档起来，这样以后就不用翻阅纸质文档了。<br><a id="more"></a></p>
-<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><hr>
+        <p>这一小节主要介绍C++中常见的几个比较重要的关键字，go<br><a id="more"></a></p>
+<hr>
+<h1 id="const"><a href="#const" class="headerlink" title="const"></a>const</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> b = <span class="number">500</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span>* a = &amp;b; <span class="comment">//①</span></div><div class="line"><span class="keyword">int</span> <span class="keyword">const</span>* a = &amp;b; <span class="comment">//②</span></div><div class="line"><span class="keyword">int</span>* <span class="keyword">const</span> a = &amp;b; <span class="comment">//③</span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span>* <span class="keyword">const</span> a = &amp;b; <span class="comment">//④</span></div></pre></td></tr></table></figure>
 <ul>
-<li>算术运算符：*  -  +  /</li>
-<li>关系运算符：&lt;  &gt;  ==  !=  &gt;=  &lt;=</li>
-<li>逻辑运算符：&amp;&amp;  ||  ！</li>
-<li>位运算符： &lt;&lt;  &gt;&gt;  ~  |  &amp;  ^</li>
-<li>赋值运算符：=</li>
-<li>域运算符：::</li>
-<li>模运算符：%</li>
-<li>条件运算符：? :</li>
-<li>逗号运算符：， （<code>e.g. a=3*5, a*4;  //a为60</code>）</li>
-<li>指针运算符：*  &amp;</li>
-<li>求字节运算符：sizeof</li>
-<li>强制类型转换运算符：（类型）</li>
-<li>分量运算符：.  -&gt;  （应用于类、结构体中）</li>
-<li>下标运算符：[ ]</li>
-<li>函数调用运算符：（变量）</li>
+<li>const位于星号的左侧，则const用以修饰指针所指向的变量为常量；</li>
+<li>const位于星号的右侧，则const用以修饰指针本身为常量；</li>
+<li>const与变量类型的位置无关。</li>
 </ul>
-<h2 id="优先级关系"><a href="#优先级关系" class="headerlink" title="优先级关系"></a>优先级关系</h2><ul>
-<li>L1：( )  [ ]  -&gt;  .  ::  右++  右–</li>
-<li>L2：!  ~  左++  左–  -  +  *  &amp;  (type)  sizeof</li>
-<li>L3：-&gt;<em>  .</em>  （e.g. <code>ptr-&gt;*var=24;  obj* var;</code></li>
-<li>L4：*  /  %</li>
-<li>L5：+  -</li>
-<li>L6：&lt;&lt;  &gt;&gt;</li>
-<li>L7：&lt;  &gt;  &lt;=  &gt;=</li>
-<li>L8：==  !=</li>
-<li>L9：&amp;</li>
-<li>L10：^</li>
-<li>L11：|</li>
-<li>L12：&amp;&amp;</li>
-<li>L13：||</li>
-<li>L14：? :</li>
-<li>L15：=  +=  -=  *=  /=  %=  &amp;=  ^=  |=  &lt;&lt;=  &gt;&gt;=</li>
-<li>L16：，</li>
-</ul>
-<h1 id="联合体-union"><a href="#联合体-union" class="headerlink" title="联合体 union"></a>联合体 union</h1><hr>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">union</span> Name</div><div class="line">&#123;</div><div class="line">    type1 member1;</div><div class="line">    type2 member2;</div><div class="line">    ...</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>这三点我们展开说：</p>
 <ul>
-<li>成员具有相同的内存地址，对某个成员赋值，将会覆盖之前成员的值，使之消失。（这也是其与结构体的区别）</li>
-<li>在任意时刻，union只能有一个成员存在值。</li>
-<li>无名联合体通常用于结构体/类的成员。(就是没有Name的联合体)</li>
+<li><p>式子①等价于式子②，表示指向的值不可以修改，但可以重新指别处。针对①②中的a可以先不进行初始化，因为a本身不是常量。 e.g.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> b = <span class="number">500</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span>* a = &amp;b; <span class="comment">//a指向的区域是常量，不可修改</span></div><div class="line">*a = <span class="number">600</span>; <span class="comment">//编译错误，a指向的是read-only区域</span></div><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line"><span class="keyword">int</span> b = <span class="number">500</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span>* a = &amp;b;</div><div class="line">b = <span class="number">600</span>;</div><div class="line"><span class="built_in">cout</span> &lt;&lt; *a;  <span class="comment">//输出600</span></div><div class="line"></div><div class="line">---</div><div class="line"><span class="keyword">int</span> b = <span class="number">500</span>, c = <span class="number">600</span>;</div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span>* a = &amp;b;</div><div class="line">a = &amp;c;  <span class="comment">//a重新指向别的变量</span></div><div class="line"><span class="built_in">cout</span> &lt;&lt; *a;  <span class="comment">//输出600</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>对于式子③，指针本身是常量，必须先进行初始化，本身位置是不可动的，但指向的值是可以修改的；e.g.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> b = <span class="number">500</span>, c = <span class="number">600</span>;</div><div class="line"><span class="keyword">int</span>* <span class="keyword">const</span> a = &amp;b; <span class="comment">//正确</span></div><div class="line"><span class="keyword">int</span>* <span class="keyword">const</span> d; <span class="comment">//错误，d为常量指针，必须进行初始化</span></div><div class="line">*a = <span class="number">600</span>;  <span class="comment">//正确，指向的值可以修改，此时b的值也随之变成500</span></div><div class="line">a++;  <span class="comment">//错误，a本身位置不可动</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>对于式子④，指针本身与指向的内容均为常量，均不可变。</p>
+</li>
+<li>还有一种const，在类中，成员函数后加一个const，如<code>int GetX() const;</code>，表明这个函数不会对类的数据成员进行修改，否则会报错。</li>
+<li>针对const与普通函数的组合，如<code>int const fun();</code>(表示返回值必须为常量)，其判断同上。</li>
 </ul>
-<p>e.g.<br><img src="http://ww3.sinaimg.cn/large/a229b272jw1f9vfepdxd6j20lc06kq3g.jpg" alt="union类型成员变量内存图"></p>
-<h1 id="类-Class"><a href="#类-Class" class="headerlink" title="类 Class"></a>类 Class</h1><hr>
-<h2 id="构造函数constructor（有默认的）"><a href="#构造函数constructor（有默认的）" class="headerlink" title="构造函数constructor（有默认的）"></a>构造函数constructor（有默认的）</h2><ul>
-<li>作用：对对象进行初始化，在对象被创建时由编译器自动调用。</li>
-<li>函数名与类名相同，没有返回值。</li>
-</ul>
-<h2 id="拷贝构造函数copy-constructor（有默认的）"><a href="#拷贝构造函数copy-constructor（有默认的）" class="headerlink" title="拷贝构造函数copy constructor（有默认的）"></a>拷贝构造函数copy constructor（有默认的）</h2><ul>
-<li>形参为本类对象的引用，作用是用一个已存在的对象去初始化另一个新的对象，具体即为完成对象的克隆。形如：类名 (类名 &amp;对象名)</li>
-<li>被调用的情况（条件）：<ul>
-<li>用一个对象去初始化另一个对象。  <code>Point a(b)</code></li>
-<li>某函数的形参为类的对象时，在进行形参与实参结合时。<code>void f(Point a)</code></li>
-<li>某函数的返回值为类的对象时，在返回调用的时候。<code>Point f(int x)</code>  ps: 编译器会在调用函数处创建一个临时的无名对象，其生命周期仅存在于如<code>Point A = f();</code> 此语句中。</li>
+<hr>
+<h1 id="extern"><a href="#extern" class="headerlink" title="extern"></a>extern</h1><ul>
+<li>标识于变量或函数之前，用于表示变量或函数定义于别的文件中，提示编译器去其他编译模块寻找；</li>
+<li><code>extern 类型 变量名;</code> 如： <code>extern int a;</code><ul>
+<li>外部变量是可以为多个源文件所共享的全局变量；</li>
+<li>可以于多个文件中用extern多处声明，但定义只能有一处。</li>
 </ul>
 </li>
-</ul>
-<h2 id="类的成员函数"><a href="#类的成员函数" class="headerlink" title="类的成员函数"></a>类的成员函数</h2><ul>
-<li>原型声明要写在类体中，而具体实现一般是要写在类之外的。<br><code>返回类型  类名::函数名(参数列表) {}</code></li>
-<li>内联成员函数inline<ul>
-<li>显式：在函数体实现时，在返回值的类型前加inline</li>
-<li>隐式：直接将函数体放于类体内。</li>
-<li>针对一些功能简单、规模较小、使用频繁的函数，可以设计为内联函数，它会在程序的编译时期将函数体放到每一个调用处。</li>
-<li>inline只表示对编译器发出一个请求，但编译器并不一定承诺将其作为内联，同时，没有用inline修饰的函数也可能被编译成内联。</li>
+<li><code>extern &quot;c&quot; 函数名</code><ul>
+<li>由于c++支持重载，所以对函数名翻译会使之变化，使之可能在链接时找不到对应函数的情况；</li>
+<li><code>extern &quot;c&quot;</code>会进行链接指定，告诉编译器要保持名称。</li>
 </ul>
 </li>
-</ul>
-<h2 id="析构函数destructor-有默认的"><a href="#析构函数destructor-有默认的" class="headerlink" title="析构函数destructor (有默认的)"></a>析构函数destructor (有默认的)</h2><ul>
-<li>在对象的生存期即将结束时被自动调用，不接受任何参数<br><code>~类名(){}</code></li>
-</ul>
-<h1 id="类的组合"><a href="#类的组合" class="headerlink" title="类的组合"></a>类的组合</h1><hr>
-<ul>
-<li>各类的构造函数调用次序：<ul>
-<li>1）先调用内嵌对象的构造函数，如果内嵌了多个类，则按它们在类中定义的顺序来调用；</li>
-<li>2）再调用本类的构造函数。</li>
+<li><code>extern 返回值 函数名(参数列表);</code><ul>
+<li>提示该函数是在别的源文件里定义的。</li>
 </ul>
 </li>
-<li>析构函数的调用顺序则与构造函数完全相反。</li>
-<li>组合类构造函数定义的一般形式：<ul>
-<li><code>类名::类名(形参表):内嵌对象1(形参表), 内嵌对象2(形参表)... {}</code></li>
-<li>此构造函数组合类初始化方法可应用于一般变量，如<code>Circle::Circle(float r) : R(r){}</code></li>
+<li>因此，extern进行变量/函数声明，不要去跟定义，否则会极有可能在链接不同的编译模块时，出现重复定义的错误。</li>
 </ul>
-</li>
-<li>为组合类编写拷贝构造函数时，需要为内嵌成员对象传递参数。</li>
-</ul>
-<h1 id="类的前向引用声明"><a href="#类的前向引用声明" class="headerlink" title="类的前向引用声明"></a>类的前向引用声明</h1><hr>
-<p>类的组合可能会相互依赖，此时便需要前向引用声明，否则编译不会通过，但可以声明指针，不能是对象。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">class B;</div><div class="line">class A&#123;void f(B b)&#125;; //声明了对象，则必须前向声明</div><div class="line">class B&#123;void g(A a)&#125;;</div></pre></td></tr></table></figure></p>
-<h1 id="类中的数据共享机制"><a href="#类中的数据共享机制" class="headerlink" title="类中的数据共享机制"></a>类中的数据共享机制</h1><hr>
-<h2 id="类的静态成员"><a href="#类的静态成员" class="headerlink" title="类的静态成员"></a>类的静态成员</h2><p>-&gt; 解决同一个类不同对象之间数据与函数共享问题。</p>
-<ul>
-<li><p>静态数据成员</p>
-<ul>
-<li>一个类的所有对象只有一份拷贝；</li>
-<li>通过<code>类名::属性名</code>来访问，在所有函数外部进行初始化。</li>
-</ul>
-</li>
-<li><p>静态函数成员</p>
-<ul>
-<li>可以直接访问该类的静态数据和函数成员；</li>
-<li>如果要访问非静态数据成员，则必须进行参数传递来得到对象，再由对象来访问；</li>
-<li>非静态函数也可以访问静态成员，但需要用非内联函数，同时函数体要与静态成员处于同一个源文件中。</li>
-</ul>
+<hr>
+<h1 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h1><ul>
+<li>程序规模渐大，各coders在合并程序的时候就会可能有起名的冲突，因此引入namespace将类、函数等聚集在一个域下；</li>
+<li>e.g.<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> exap</div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> a;</div><div class="line">    <span class="function">vodi <span class="title">fun</span><span class="params">()</span></span>&#123;...&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//在调用时，使用::</span></div><div class="line">exap::a;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="友元-friend"><a href="#友元-friend" class="headerlink" title="友元 friend"></a>友元 friend</h2><p>-&gt; 不同类的成员函数之间或成员函数与普通函数之间的数据共享机制</p>
-<ul>
-<li><p>友元函数</p>
-<ul>
-<li>在类中用friend修饰的非成员函数；（该函数在类外的实现不必加friend</li>
-<li>友元函数可以是另一个类的成员函数；</li>
-<li>可以访问该类的private, protected成员；</li>
-<li>通过类的对象来访问对象成员</li>
+<hr>
+<h1 id="static"><a href="#static" class="headerlink" title="static"></a>static</h1><ul>
+<li>隐藏：所有未加static的全局变量或函数都具有全局可观性。<ul>
+<li>如果是变量，记得要加extern，告诉编译器去别的文件中寻找；函数默认情况下是有的。</li>
 </ul>
 </li>
-<li><p>友元类</p>
-  <figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> B</div><div class="line">&#123;</div><div class="line">    <span class="keyword">friend</span> <span class="keyword">class</span> A;</div><div class="line">    ...</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<ul>
-<li>A的所有成员函数均为B的友元函数，可以访问B类的所有成员；</li>
-<li>友元关系不能传递、继承，同时是单向的。</li>
+<li>保持变量内容的持久：<ul>
+<li>static变量在程序开始时分配空间，结束时释放空间；</li>
+<li>存储在内存的静态数据区。（全局变量也是存储于此）</li>
 </ul>
 </li>
+<li>tips: 关于static还有一个较为详细的记录，下回分析</li>
 </ul>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><hr>
-<p>由于我是早些年先整理出的纸质文档，参考文献较多且当时没有标注，若构成侵权请在底下留言，我会进行删除。今天先整这么多了，goodnight:)</p>
+<hr>
+<h1 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h1><ul>
+<li>首先要明白的是，编译器在编译时，会对源代码进行优化：比如第一次对i变量取值，会到其内存中去取，到第二次再遇到i变量，编译器如果识别到这两次读之间若没有对i进行修改的代码，则会直接引用上次读取的值，节省时间提高效率。但是，这在“多线程并发访问共享变量”、“内嵌汇编操纵栈”等地方，是致命的。</li>
+<li>所以，volatile关键字告诉编译器该变量是易变的，你要随时每次都去其内存地址里取，即要求每次不使用缓存，必须去内存中取。如：<code>volatile int i = 5;</code></li>
+<li>一般需要volatile变量的地方，有：<ol>
+<li>中断服务程序中修改的供其他程序访问的变量要加volatile;</li>
+<li>多线程多任务环境下各任务之间共享的变量加volatile;</li>
+<li>存储器映射的硬件寄存器要加volatile，每次读写都有不同的意义。</li>
+</ol>
+</li>
+<li><p>volatile指针与const修饰的类似，只能用const_cast转换运算符来移除volatile限定符。e.g.:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">volatile</span> <span class="keyword">int</span> c = <span class="number">5</span>;</div><div class="line"><span class="keyword">volatile</span> <span class="keyword">int</span> *cons_c = &amp;c;</div><div class="line"><span class="keyword">int</span> *modifier = <span class="keyword">const_cast</span>&lt;<span class="keyword">int</span>*&gt;(cons_c);</div></pre></td></tr></table></figure>
+</li>
+<li><p>volatile可以做到两件事：</p>
+<ol>
+<li>阻止编译器为了提高速度将一个变量缓存到寄存器内而不写回；</li>
+<li>阻止编译器调整操作volatile变量的指令执行顺序。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h1 id="explicit"><a href="#explicit" class="headerlink" title="explicit"></a>explicit</h1><ul>
+<li>抑制隐式转换；</li>
+<li>用来修饰类的构造函数，表明该构造函数是显式的；</li>
+<li><p>介绍一个隐式转换的例子：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> A </div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>: </div><div class="line">    A(<span class="keyword">int</span> m);</div><div class="line">    ...</div><div class="line">&#125;;</div><div class="line"></div><div class="line">A test = <span class="number">10</span>; <span class="comment">//编译通过</span></div><div class="line">A test1 = <span class="string">'a'</span>; <span class="comment">//编译也通过，但显然不是我们希望的，explicit便可以阻止此现象发生</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>因此原则上应该给所有的<strong>构造函数</strong>加上explicit；</p>
+</li>
+<li>只有在构造函数的声明中才能加explicit，不能在定义上加。</li>
+</ul>
+<hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><p>由于我是早些年先整理出的纸质文档，参考文献较多且当时没有标注，若构成侵权请在底下留言，我会进行删除。</p>
       
     </div>
 
@@ -496,7 +460,7 @@
           
             <a href="/tags/C/" rel="tag">#C++</a>
           
-            <a href="/tags/类/" rel="tag">#类</a>
+            <a href="/tags/关键字/" rel="tag">#关键字</a>
           
         </div>
       
@@ -505,16 +469,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/17/用GTK-写点儿界面/" rel="next" title="用GTK+写点儿界面">
-                <i class="fa fa-chevron-left"></i> 用GTK+写点儿界面
+              <a href="/2016/11/19/C-基础-0x01/" rel="next" title="C++基础_0x01">
+                <i class="fa fa-chevron-left"></i> C++基础_0x01
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/11/19/C-基础-0x01/" rel="prev" title="C++基础_0x01">
-                C++基础_0x01 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/11/23/C-中常见的兄弟概念汇总/" rel="prev" title="C++中常见的兄弟概念汇总">
+                C++中常见的兄弟概念汇总 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -530,7 +494,7 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/11/17/C-基础-0x00/" data-title="C++基础_0x00" data-content="" data-url="http://kangzeng.win/2016/11/17/C-基础-0x00/">
+        <div class="ds-share flat" data-thread-key="2016/11/21/C-基础-0x02/" data-title="C++基础_0x02" data-content="" data-url="http://kangzeng.win/2016/11/21/C-基础-0x02/">
   <div class="ds-share-inline">
     <ul class="ds-share-icons-16">
 
@@ -557,7 +521,7 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/17/C-基础-0x00/" data-title="C++基础_0x00" data-url="http://kangzeng.win/2016/11/17/C-基础-0x00/">
+      <div class="ds-thread" data-thread-key="2016/11/21/C-基础-0x02/" data-title="C++基础_0x02" data-url="http://kangzeng.win/2016/11/21/C-基础-0x02/">
       </div>
     
   </div>
@@ -666,7 +630,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#运算符"><span class="nav-number">1.</span> <span class="nav-text">运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#优先级关系"><span class="nav-number">1.1.</span> <span class="nav-text">优先级关系</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#联合体-union"><span class="nav-number">2.</span> <span class="nav-text">联合体 union</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类-Class"><span class="nav-number">3.</span> <span class="nav-text">类 Class</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构造函数constructor（有默认的）"><span class="nav-number">3.1.</span> <span class="nav-text">构造函数constructor（有默认的）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拷贝构造函数copy-constructor（有默认的）"><span class="nav-number">3.2.</span> <span class="nav-text">拷贝构造函数copy constructor（有默认的）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的成员函数"><span class="nav-number">3.3.</span> <span class="nav-text">类的成员函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#析构函数destructor-有默认的"><span class="nav-number">3.4.</span> <span class="nav-text">析构函数destructor (有默认的)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类的组合"><span class="nav-number">4.</span> <span class="nav-text">类的组合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类的前向引用声明"><span class="nav-number">5.</span> <span class="nav-text">类的前向引用声明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类中的数据共享机制"><span class="nav-number">6.</span> <span class="nav-text">类中的数据共享机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类的静态成员"><span class="nav-number">6.1.</span> <span class="nav-text">类的静态成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#友元-friend"><span class="nav-number">6.2.</span> <span class="nav-text">友元 friend</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">7.</span> <span class="nav-text">References</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#const"><span class="nav-number">1.</span> <span class="nav-text">const</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#extern"><span class="nav-number">2.</span> <span class="nav-text">extern</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#namespace"><span class="nav-number">3.</span> <span class="nav-text">namespace</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#static"><span class="nav-number">4.</span> <span class="nav-text">static</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#volatile"><span class="nav-number">5.</span> <span class="nav-text">volatile</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#explicit"><span class="nav-number">6.</span> <span class="nav-text">explicit</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">7.</span> <span class="nav-text">References</span></a></li></ol></div>
             
           </div>
         </section>

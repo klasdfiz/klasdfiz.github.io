@@ -4,11 +4,33 @@
 
     
   <url>
-    <loc>http://kangzeng.win/2016/11/21/C-%E5%9F%BA%E7%A1%80-0x10/</loc>
-    <lastmod>2016-11-21T11:29:37.000Z</lastmod>
+    <loc>http://kangzeng.win/2016/11/23/C-%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84%E5%85%84%E5%BC%9F%E6%A6%82%E5%BF%B5%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2016-11-23T11:05:33.000Z</lastmod>
     <data>
         <display>
-        <title>C++基础_0x10</title>
+        <title>C++中常见的兄弟概念汇总</title>
+        <pubTime>2016-11-23T11:00:17.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+        <tag>基本概念</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++笔记" url="http://kangzeng.win/categories/C-%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://kangzeng.win/2016/11/21/C-%E5%9F%BA%E7%A1%80-0x02/</loc>
+    <lastmod>2016-11-23T11:03:41.000Z</lastmod>
+    <data>
+        <display>
+        <title>C++基础_0x02</title>
         <pubTime>2016-11-21T11:16:45.000Z</pubTime>
         
         <tag>C++</tag>

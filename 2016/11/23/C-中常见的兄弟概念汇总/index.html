@@ -1,0 +1,1177 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="C++,基本概念,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.0.2">
+
+
+
+
+
+
+<meta name="description" content="这一篇，将为大家整理C++中常见的几大兄弟概念的区分，是面试的常考点。由于本人水平有限，只进行了非常粗略的归纳，如若大家有疑问建议配合google逐条细扣，go!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++中常见的兄弟概念汇总">
+<meta property="og:url" content="http://kangzeng.win/2016/11/23/C-中常见的兄弟概念汇总/index.html">
+<meta property="og:site_name" content="KanzCoder">
+<meta property="og:description" content="这一篇，将为大家整理C++中常见的几大兄弟概念的区分，是面试的常考点。由于本人水平有限，只进行了非常粗略的归纳，如若大家有疑问建议配合google逐条细扣，go!">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/a229b272jw1f9ztu06m8lj20ai0a5t9b.jpg">
+<meta property="og:updated_time" content="2016-11-23T11:05:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++中常见的兄弟概念汇总">
+<meta name="twitter:description" content="这一篇，将为大家整理C++中常见的几大兄弟概念的区分，是面试的常考点。由于本人水平有限，只进行了非常粗略的归纳，如若大家有疑问建议配合google逐条细扣，go!">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/a229b272jw1f9ztu06m8lj20ai0a5t9b.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://kangzeng.win/2016/11/23/C-中常见的兄弟概念汇总/">
+
+
+  <title> C++中常见的兄弟概念汇总 | KanzCoder </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">KanzCoder</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Thinking in Code.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                C++中常见的兄弟概念汇总
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-23T19:00:17+08:00" content="2016-11-23">
+              2016-11-23
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/C-笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">C++笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/23/C-中常见的兄弟概念汇总/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/23/C-中常见的兄弟概念汇总/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/23/C-中常见的兄弟概念汇总/" class="leancloud_visitors" data-flag-title="C++中常见的兄弟概念汇总">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这一篇，将为大家整理C++中常见的几大兄弟概念的区分，是面试的常考点。由于本人水平有限，只进行了非常粗略的归纳，如若大家有疑问建议配合google逐条细扣，go!<br><a id="more"></a></p>
+<hr>
+<h1 id="指针函数与函数指针"><a href="#指针函数与函数指针" class="headerlink" title="指针函数与函数指针"></a>指针函数与函数指针</h1><p>这条在此前C++基础笔记中已阐述过，这里为了同一管理，现再列出。</p>
+<ul>
+<li>指针函数： <code>void *fun();</code>即返回指针的函数。</li>
+<li><p>函数指针： <strong>用以处理参数与返回值形式均一致，而功能是不确定的一组函数，有两种声明与定义</strong></p>
+<ol>
+<li><p>形式一</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">T (*fun)(...); <span class="comment">//声明</span></div><div class="line">fun = FunctionName; <span class="comment">//赋值</span></div><div class="line">fun(); <span class="comment">//调用</span></div></pre></td></tr></table></figure>
+<p>e.g.:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">void</span> (*fun)();</div><div class="line">fun = A;</div><div class="line">fun();</div></pre></td></tr></table></figure>
+</li>
+<li><p>形式二</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">T</span> <span class="params">(*fun)</span><span class="params">(...)</span></span>;</div><div class="line">fun A = &amp;FunctionName;</div><div class="line">(*A)(...); <span class="comment">//相当于调用FunctionName()</span></div></pre></td></tr></table></figure>
+<p>e.g.:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">void</span> <span class="params">(*fun)</span><span class="params">()</span></span>;</div><div class="line">fun B = &amp;A;  <span class="comment">//相当于一种类型</span></div><div class="line">(*B)();  <span class="comment">//即 B();</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h1 id="类对象与类指针"><a href="#类对象与类指针" class="headerlink" title="类对象与类指针"></a>类对象与类指针</h1><ul>
+<li>类对象<code>A a;</code>，类指针<code>A *a;</code>；</li>
+<li>类指针在访问成员时用：<code>指针名-&gt;成员名</code>访问，如：<code>a-&gt;fun();</code>;</li>
+<li>类指针在使用前一定要初始化（意义同普通指针），或new或去指向对象；</li>
+<li>类指针指向内存中存放的类对象，而类对象是利用构造函数在内存中分配一块内存；</li>
+<li>在访问类成员时，类对象用<code>.</code>操作符，而类指针用<code>-&gt;</code>操作符；</li>
+<li>类对象为栈变量，类指针为堆变量；</li>
+<li>在类的声明尚未完成时，可声明类指针，不可声明类对象；（此前的“类的前向引用”章节里类似）</li>
+<li>要发挥虚函数的作用，则必须使用类指针（同多态性）。</li>
+</ul>
+<hr>
+<h1 id="浅拷贝与深拷贝"><a href="#浅拷贝与深拷贝" class="headerlink" title="浅拷贝与深拷贝"></a>浅拷贝与深拷贝</h1><ul>
+<li>是针对类的拷贝构造函数的一个子概念。</li>
+<li>浅拷贝只是对对应数据的简单复制，这对数组、指针等需要动态分配内存的变量会造成无法估计的错误。因为两个对象指针指向了同一块内存地址，在这两个对象调用析构函数时，相当于会执行两次delete，程序会崩溃，此时便需要深拷贝；</li>
+<li>深拷贝：在拷贝构造函数中为本类的变量申请自己的空间，使之不同对象的变量互不影响；</li>
+<li>类的默认拷贝函数为浅拷贝，用老对象给新对象一个一个赋值。</li>
+<li>e.g.:</li>
+</ul>
+<p><img src="http://ww4.sinaimg.cn/large/a229b272jw1f9ztu06m8lj20ai0a5t9b.jpg" alt="浅拷贝与深拷贝图例"></p>
+<hr>
+<h1 id="public、protected与private"><a href="#public、protected与private" class="headerlink" title="public、protected与private"></a>public、protected与private</h1><ul>
+<li>用来定义类成员的属性；</li>
+<li>public: 只能由<strong>该类中的函数</strong>、<strong>子类函数</strong>、<strong>友元函数</strong>，以及<strong>该类的对象</strong>所访问；</li>
+<li>protected: 只能由<strong>该类中的函数</strong>、<strong>子类函数</strong>，以及<strong>友元函数</strong>访问，<strong>不能</strong>被该类的对象访问；</li>
+<li>private: 只能由<strong>该类中的函数</strong>、<strong>友元函数</strong>访问，不可以被子类或者类的对象访问；</li>
+<li><strong>总结</strong>：<ul>
+<li>类的对象只能访问该类的public成员；</li>
+<li>类的内部函数、友元函数可以访问该类的所有成员；</li>
+<li>子类函数可以访问父类的public成员与protected成员。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="公有继承、私有继承与保护继承"><a href="#公有继承、私有继承与保护继承" class="headerlink" title="公有继承、私有继承与保护继承"></a>公有继承、私有继承与保护继承</h1><ul>
+<li>用来描述子类对父类的继承类型，及子类对父类成员的访问权限；</li>
+<li>public继承：<ul>
+<li>父类成员对子类的可见性：public/protected可见</li>
+<li>父类成员对子类对象的可见性：仅public可见</li>
+<li>子类的对象可以赋值给父类的对象，如：<code>Point B = A;</code></li>
+<li>子类的对象可以初始化父类的引用，如：<code>Point &amp;B = A;</code></li>
+<li>子类对象的地址可以赋给父类类型的指针，如：<code>Point *B = &amp;A;</code></li>
+</ul>
+</li>
+<li>private继承：<ul>
+<li>父类成员对子类的可见性：public/protected可见</li>
+<li>父类成员对子类对象的可见性：所有成员均不可见；</li>
+</ul>
+</li>
+<li>protected继承：<br>  同private继承。</li>
+</ul>
+<hr>
+<h1 id="new、operator-new与placement-new"><a href="#new、operator-new与placement-new" class="headerlink" title="new、operator new与placement new"></a>new、operator new与placement new</h1><ul>
+<li>new是运算符，operator new()与placement new()为new的重载形式，是一个函数；</li>
+<li>operator new()完成的操作一般只是分配内存；</li>
+<li>如<code>MyClass *p = new MyClass;</code>，这里new作了三步操作：<ol>
+<li>调用了operator new()函数用以分配内存；</li>
+<li>调用了MyClass构造函数来生成类的对象；</li>
+<li>返回了相应的指针。</li>
+</ol>
+</li>
+<li>operator new()在<strong>每一个类当中</strong>均可以被重载，使其完成其类特有的分配空间效果，但<strong>不能在全局</strong>上对其进行重载；而如果类中没有对其进行重载，则是调用全局的<code>::operator new()</code>来分配；若重载，重载的返回类型必须为<code>void *</code>，可以附带参数，且第一个参数为空间大小。</li>
+<li>placement new()是重载了operator new()的一个标准、一个全局版本，其并不能分配内存；原型为<code>void *operator new(size_t, void*)</code>，placement new()可以解决：<ol>
+<li>缓冲区问题：如果想在预分配的内存上创建对象，则不能用new；</li>
+<li>提高时空效率：new是在堆中找到足够大的剩余空间，此速度是很慢的，而且有可能出现无法分配内存的情况。因此placement new()不用再查找内存，分配的时间也是常数级，因为此前已经预分配完。（适用于小对象、数量又多、长时间运行且不希望被打断的程序）</li>
+</ol>
+</li>
+<li><p>三者的区别：</p>
+<ul>
+<li>new：<ul>
+<li>不能重载，行为总是如下执行：调用operator new()分配内存-&gt;调用其构造函数生成其类对象-&gt;返回函数指针</li>
+</ul>
+</li>
+<li>operator new():<ul>
+<li>实现不同的内存分配，可以重载；</li>
+<li>如果类没有对operator new()进行重载，则new是会调用全局的<code>::operator new()</code>完成堆的分配。</li>
+</ul>
+</li>
+<li>placement new():<ul>
+<li>它只是operator new()重载的一个版本，并不能分配内存，只是返回指向已经分配好的某段内存的一个指针。因此要释放的时候是不能删除它的，只能通过调用对象的析构函数。</li>
+<li>如果想在一个已经分配的内存中创建一个对象，使用new是行不通的，placement new允许在一个已经分配好的内存中构造一个新的对象，原型<code>void *operator new(size_t size, void *p)</code>的p即指向一个已经分配好的内存缓冲区的首地址。</li>
+<li>e.g.:<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Task;</div><div class="line"><span class="keyword">char</span> *buff = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="keyword">sizeof</span>(Task) + <span class="keyword">sizeof</span>(<span class="keyword">int</span>)]; <span class="comment">//提前分配好的一块内存</span></div><div class="line">Task *ptask = <span class="keyword">new</span> (buff) Task;  <span class="comment">//在分配好的一块内存区域上构造一个对象</span></div><div class="line">ptask-&gt;fun(); <span class="comment">//使用</span></div><div class="line">ptask-&gt;~Task();  <span class="comment">//必须显式地调用析构函数</span></div><div class="line"><span class="keyword">delete</span> [] buff;  <span class="comment">//如果不再打算使用Buff，别忘了释放它</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Q: 有了new/delete为何还需要operator new()/operator delete()?  A: 实现自己的operator new/delete是为了更高的效率，它们具有良好的通用性，在那些需要大量动态分配而空间却很小的对象尤为适用。</p>
+</li>
+</ul>
+<hr>
+<h1 id="函数返回指针与返回引用"><a href="#函数返回指针与返回引用" class="headerlink" title="函数返回指针与返回引用"></a>函数返回指针与返回引用</h1><ul>
+<li><p>返回指针问题：<code>T *fun(){}</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function">T *<span class="title">fun</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    T *temp1 = <span class="literal">NULL</span>;</div><div class="line">    T temp2[] = <span class="string">"hello"</span>; <span class="comment">//局部变量放在栈区，函数结束后会进行释放，因此不能用来做return;</span></div><div class="line">    temp1 = <span class="built_in">malloc</span>(...); <span class="comment">//动态申请的变量位于堆区，只要程序运行且不free就一直存在，所以可以用来return，但记得在外部调用完毕后执行free</span></div><div class="line">    <span class="keyword">return</span> temp1;</div><div class="line">&#125;</div><div class="line"><span class="comment">/*</span></div><div class="line">要调用函数中的变量问题，有两种方案：</div><div class="line">1）动态分配空间的变量，new/malloc</div><div class="line">2）使用的static变量、const变量、或全局变量</div><div class="line">*/</div></pre></td></tr></table></figure>
+</li>
+<li><p>返回引用问题： <code>T &amp;fun(){}</code></p>
+<ul>
+<li>值返回会产生一个临时变量用来存储结果，而引用返回则不会，所以引用返回不能返回对局部变量的引用，因为局部变量在函数结束后会释放掉其对应的内存空间</li>
+<li>所以可以尝试返回：函数参数的引用变量或者*this或返回左值</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="重载、覆盖与隐藏"><a href="#重载、覆盖与隐藏" class="headerlink" title="重载、覆盖与隐藏"></a>重载、覆盖与隐藏</h1><p>-&gt; 用以描述类中函数的特性；</p>
+<ul>
+<li>重载overload:<ul>
+<li>参数类型、个数、顺序至少有一个不同；</li>
+<li>只是返回类型不同的不算是overload；</li>
+<li>重载发生在相同的范围内，即在同一个类的不同函数之间；</li>
+<li>virtual关键字可有可无。</li>
+</ul>
+</li>
+<li>覆盖override<ul>
+<li>函数名、参数、返回类型必须完全相同；</li>
+<li>覆盖发生在不同的范围内，即在父类子类之间的不同函数；</li>
+<li>父类中的函数必须含有virtual关键字。</li>
+</ul>
+</li>
+<li>隐藏<ul>
+<li>隐藏是指子类的函数屏蔽了与其同名的父类函数；</li>
+<li>若子类的函数与父类的函数同名，但参数不同，无论有无virtual，父类函数将被隐藏；（注意与重载的区分）</li>
+<li>若子类的函数与父类的函数同名，且参数相同，但父类函数中没有virtual关键字，此时父类函数将被隐藏。（注意与覆盖的区分）</li>
+</ul>
+</li>
+</ul>
+<p>e.g.:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> Base</div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">float</span> x)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">g</span><span class="params">(<span class="keyword">float</span> x)</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">h</span><span class="params">(<span class="keyword">float</span> x)</span></span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">class</span> Derived : <span class="keyword">public</span> Base</div><div class="line">&#123;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">float</span> x)</span></span>; <span class="comment">//override</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">g</span><span class="params">(<span class="keyword">int</span> x)</span></span>;  <span class="comment">//隐藏</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">h</span><span class="params">(<span class="keyword">float</span> x)</span></span>; <span class="comment">//隐藏</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">//case:</span></div><div class="line">Derived d;</div><div class="line">Base *p = &amp;d;</div><div class="line">Derived *q = &amp;d;</div><div class="line">p-&gt;f(); <span class="comment">//Derived</span></div><div class="line">q-&gt;f(); <span class="comment">//Derived</span></div><div class="line">p-&gt;g(); <span class="comment">//Base</span></div><div class="line">q-&gt;g(); <span class="comment">//Derived</span></div><div class="line">p-&gt;h(); <span class="comment">//Base</span></div><div class="line">q-&gt;h(); <span class="comment">//Derived</span></div></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="堆与栈"><a href="#堆与栈" class="headerlink" title="堆与栈"></a>堆与栈</h1><ol>
+<li>申请方式的不同：<ul>
+<li>堆是动态分配的，由程序员自行决定new或者delete；</li>
+<li>栈是由系统自动分配的，如声明一个函数的局部变量。</li>
+</ul>
+</li>
+<li>系统响应的不同：<ul>
+<li>栈：只要栈的剩余空间比所申请的空间大，系统就提供，否则就是栈溢出；</li>
+<li>堆：操作系统在堆中有一个记录空闲地址的链表，当系统收到申请时，首先遍历该链表，寻找第一个大于所申请空间的堆结点，然后分配给程序，同时会在该空间的首地址记录此空间的大小，用在delete/free时能全部回收。（由这种工作机制可以看出，堆容易造成<strong>内存碎片</strong>）</li>
+</ul>
+</li>
+<li>申请大小的限制：<ul>
+<li>栈：栈是向低地址扩展的数据结构，是一块连续的内存区域，因此栈顶是事先规定好的，即容量也是规定好的，windows栈大小一般是2M，总之是个常数。</li>
+<li>堆：堆是向高地址扩展的数据结构，是一块不连续的内存区域，因为是用链表来存储空闲的地址。堆的大小取决于计算机中有效的虚拟内存。（如我之前在博客中提过的“<a href="http://blog.csdn.net/scanf5288/article/details/50588150" target="_blank" rel="external">堆的最大申请数量——我能malloc多少？</a>”，当然当时测试机的内存是4G）</li>
+</ul>
+</li>
+<li>效率的不同<ul>
+<li>栈是由操作系统自身来操作，速度快，不过无法进行人为操作；</li>
+<li>堆由函数分配，速度慢，容易产生碎片，但使用操作方便。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="malloc-free与new-delete"><a href="#malloc-free与new-delete" class="headerlink" title="malloc/free与new/delete"></a>malloc/free与new/delete</h1><ul>
+<li>malloc/free是函数，new/delete是关键字；</li>
+<li>malloc仅仅是个函数，用来向堆申请空间赋给变量；</li>
+<li>new可以调用对象的构造函数，delete则可以调用析构函数；</li>
+<li>free前要判断指针是否是NULL，而delete则不用；</li>
+<li>delete后的指针为游离指针，一般需要重新指向NULL。</li>
+</ul>
+<hr>
+<h1 id="sizeof-与strlen"><a href="#sizeof-与strlen" class="headerlink" title="sizeof()与strlen()"></a>sizeof()与strlen()</h1><ul>
+<li>sizeof返回的类型是unsigned int，strlen也是；</li>
+<li>sizeof为运算符，strlen是一个函数；</li>
+<li>strlen只能用<code>char*</code>为参数，而sizeof的参数可以是类型、函数等；</li>
+<li>sizeof在编译时计算，strlen在运行时才能知道；</li>
+<li>e.g.<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> a[<span class="number">20</span>] = <span class="string">"123456"</span>;</div><div class="line"><span class="comment">//sizeof(a)值为20;</span></div><div class="line"><span class="comment">//strlen(a)值为6;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h1 id="宏与内联函数"><a href="#宏与内联函数" class="headerlink" title="宏与内联函数"></a>宏与内联函数</h1><ul>
+<li>宏只是简单地替换，inline是嵌入代码中，要做类型检查；</li>
+<li>inline一般只用于：<ul>
+<li>函数被不断地重复调用；</li>
+<li>函数只有简单几行，且不含for，while，switch。</li>
+</ul>
+</li>
+<li>宏不是函数，只是在编译预处理阶段，将程序中有关字符串替换掉；</li>
+<li>inline必须与具体的函数定义体结合才称为内嵌函数。</li>
+</ul>
+<hr>
+<h1 id="指针与引用"><a href="#指针与引用" class="headerlink" title="指针与引用"></a>指针与引用</h1><ul>
+<li>指针可以指向空NULL，而引用在任何时候都不可以指向空值，即要初始化；</li>
+<li>指针在使用时经常要判断是否为空指针，否则空指针的使用会出现异常；</li>
+<li>可修改性：指针指的对象可以修改，而引用一旦初始化，则它将指向一个对象，且不可改变，但是该对象的内容是可变的。</li>
+</ul>
+<hr>
+<h1 id="空指针与迷途指针"><a href="#空指针与迷途指针" class="headerlink" title="空指针与迷途指针"></a>空指针与迷途指针</h1><ul>
+<li>当delete一个指针后，通知编译器释放内存，但指针本身依然存在，则此时即为迷途指针；</li>
+<li>在对迷途指针执行<code>myptr = NULL</code>时，即变成空指针了；</li>
+<li>对迷途指针使用delete会令程序崩溃，而delete空指针则不会；</li>
+<li>最好的习惯是<code>delete p;</code>之后，再<code>p = NULL;</code>，不要存在迷途指针。</li>
+</ul>
+<hr>
+<h1 id="指针与句柄"><a href="#指针与句柄" class="headerlink" title="指针与句柄"></a>指针与句柄</h1><ul>
+<li>句柄相当于指针的指针，系统用句柄来标记系统资源；</li>
+<li>句柄是记载着对象在内存中的地址，而这个地址对应存放着实际对象。</li>
+</ul>
+<hr>
+<h1 id="struct与class"><a href="#struct与class" class="headerlink" title="struct与class"></a>struct与class</h1><ul>
+<li>struct默认访问变量方式为public，而class默认是private；（仅此不同）</li>
+<li>struct与class类似，也可以有构造函数、析构函数、继承等；</li>
+<li>在c++中存在struct即是为了兼容以前的c的版本。</li>
+</ul>
+<hr>
+<h1 id="左值与右值"><a href="#左值与右值" class="headerlink" title="左值与右值"></a>左值与右值</h1><ul>
+<li>只能出现在“=”右边的叫右值（即数据值）；</li>
+<li>既可以在左也可以在右的称为左值（即地址值）；</li>
+</ul>
+<hr>
+<h1 id="references"><a href="#references" class="headerlink" title="references"></a>references</h1><p>由于我是早些年先整理出的纸质文档，参考文献较多且当时没有标注，若构成侵权请在底下留言，我会进行删除。</p>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag">#C++</a>
+          
+            <a href="/tags/基本概念/" rel="tag">#基本概念</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/21/C-基础-0x02/" rel="next" title="C++基础_0x02">
+                <i class="fa fa-chevron-left"></i> C++基础_0x02
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/11/23/C-中常见的兄弟概念汇总/" data-title="C++中常见的兄弟概念汇总" data-content="" data-url="http://kangzeng.win/2016/11/23/C-中常见的兄弟概念汇总/">
+  <div class="ds-share-inline">
+    <ul class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/23/C-中常见的兄弟概念汇总/" data-title="C++中常见的兄弟概念汇总" data-url="http://kangzeng.win/2016/11/23/C-中常见的兄弟概念汇总/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Kang Zeng">
+          <p class="site-author-name" itemprop="name">Kang Zeng</p>
+          <p class="site-description motion-element" itemprop="description">A vegetable bird.</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/klasdfiz" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/glenelohim" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#指针函数与函数指针"><span class="nav-number">1.</span> <span class="nav-text">指针函数与函数指针</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#类对象与类指针"><span class="nav-number">2.</span> <span class="nav-text">类对象与类指针</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浅拷贝与深拷贝"><span class="nav-number">3.</span> <span class="nav-text">浅拷贝与深拷贝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#public、protected与private"><span class="nav-number">4.</span> <span class="nav-text">public、protected与private</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#公有继承、私有继承与保护继承"><span class="nav-number">5.</span> <span class="nav-text">公有继承、私有继承与保护继承</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#new、operator-new与placement-new"><span class="nav-number">6.</span> <span class="nav-text">new、operator new与placement new</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数返回指针与返回引用"><span class="nav-number">7.</span> <span class="nav-text">函数返回指针与返回引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重载、覆盖与隐藏"><span class="nav-number">8.</span> <span class="nav-text">重载、覆盖与隐藏</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#堆与栈"><span class="nav-number">9.</span> <span class="nav-text">堆与栈</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#malloc-free与new-delete"><span class="nav-number">10.</span> <span class="nav-text">malloc/free与new/delete</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sizeof-与strlen"><span class="nav-number">11.</span> <span class="nav-text">sizeof()与strlen()</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#宏与内联函数"><span class="nav-number">12.</span> <span class="nav-text">宏与内联函数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指针与引用"><span class="nav-number">13.</span> <span class="nav-text">指针与引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#空指针与迷途指针"><span class="nav-number">14.</span> <span class="nav-text">空指针与迷途指针</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#指针与句柄"><span class="nav-number">15.</span> <span class="nav-text">指针与句柄</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#struct与class"><span class="nav-number">16.</span> <span class="nav-text">struct与class</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#左值与右值"><span class="nav-number">17.</span> <span class="nav-text">左值与右值</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#references"><span class="nav-number">18.</span> <span class="nav-text">references</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kang Zeng</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"kangzeng"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = false;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = decodeURIComponent(data.url);
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title >= 0 || index_content >= 0 ){
+                                isMatch = true;
+								if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            } 
+							
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("XzqQSgyxuHlKNYrM4Sm2bDYC-gzGzoHsz", "25m2S3n6mejYaxadgPXGvHwA");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
