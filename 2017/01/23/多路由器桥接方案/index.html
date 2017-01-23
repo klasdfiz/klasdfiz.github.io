@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="klasdfiz, Kang Zeng, KanzCoder">
+  <meta name="keywords" content="路由器桥接,">
 
 
 
@@ -84,15 +84,16 @@
 
 
 
-<meta name="description" content="A vegetable bird.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KanzCoder">
-<meta property="og:url" content="http://kangzeng.win/tags/函数指针/index.html">
+<meta name="description" content="本章主要介绍如何拓展wifi信号范围。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多路由器桥接方案">
+<meta property="og:url" content="http://kangzeng.win/2017/01/23/多路由器桥接方案/index.html">
 <meta property="og:site_name" content="KanzCoder">
-<meta property="og:description" content="A vegetable bird.">
+<meta property="og:description" content="本章主要介绍如何拓展wifi信号范围。">
+<meta property="og:updated_time" content="2017-01-23T09:13:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KanzCoder">
-<meta name="twitter:description" content="A vegetable bird.">
+<meta name="twitter:title" content="多路由器桥接方案">
+<meta name="twitter:description" content="本章主要介绍如何拓展wifi信号范围。">
 
 
 
@@ -113,10 +114,10 @@
 
 
 
-  <link rel="canonical" href="http://kangzeng.win/tags/函数指针/">
+  <link rel="canonical" href="http://kangzeng.win/2017/01/23/多路由器桥接方案/">
 
 
-  <title> 标签: 函数指针 | KanzCoder </title>
+  <title> 多路由器桥接方案 | KanzCoder </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -137,7 +138,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left">
+  <div class="container one-collumn sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -248,44 +249,204 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2>
-        函数指针
-        <small>标签</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
+
+  
+  
+
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="//schema.org/Article">
-    <header class="post-header">
 
-      <h1 class="post-title">
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2016/11/19/C-基础-0x01/" itemprop="url">
-              
-                <span itemprop="name">C++基础_0x01</span>
-              
-            </a>
         
-      </h1>
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                多路由器桥接方案
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2016-11-19T20:34:40+08:00" content="2016-11-19">
-          11-19
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-23T15:14:25+08:00" content="2017-01-23">
+              2017-01-23
+            </time>
+          </span>
 
-    </header>
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/环境配置/" itemprop="url" rel="index">
+                    <span itemprop="name">环境配置</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/23/多路由器桥接方案/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/23/多路由器桥接方案/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2017/01/23/多路由器桥接方案/" class="leancloud_visitors" data-flag-title="多路由器桥接方案">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本章主要介绍如何拓展wifi信号范围。</p>
+<a id="more"></a>
+<p>现在家里的网络带宽加到100M了，下行速度能到6、7M/s杠杠的，一年也才七八百来块，相较于以前的￥72/月且只有8M带宽来说，已经非常良心了。所以就想着有必要给拓宽一下wifi范围。可能有种简单的方案是直接买那种带无线AP的插头，可以直接将房间的有线网口升级为带无线的功能。但是发现家里有2台闲置的路由器，就想着把它设置成带wifi的交换机，物尽其用嘛:)</p>
+<hr>
+<h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul>
+<li>具备上网功能的路由器（主路由器）</li>
+<li>具备WDS功能的路由器一台或多台（从路由器）</li>
+<li>若干网线</li>
+</ul>
+<hr>
+<h1 id="步骤及注意点"><a href="#步骤及注意点" class="headerlink" title="步骤及注意点"></a>步骤及注意点</h1><ul>
+<li><p>主路由器我用的是当时办理网络时送的，进后台：</p>
+<ul>
+<li>修改信道，<strong>不让</strong>它为自动模式，从可选项里选择一个信道，频段默认，现在路由器一般默认项的都差不多；</li>
+<li>修改分配IP池范围，主要是为了不与从路由器的IP地址冲突；</li>
+<li>PS:上述这两步，可能你不执行操作，到后来也能正常上网，但是，你会发现网络时连时不连，然后搞得主路由器只支持插线上网，这个坑我已经替大家先踩了。由于这个坑我还一度认为我发现了ios10.2的一个重大BUG，就差没给Cook发邮件了，里面的故事可以写好几页本章就不说道了。</li>
+</ul>
+</li>
+<li><p>从路由器我用的是TPLINK，一台11年的老路由，直接从主路由器LAN口出，进的从路由器也是<strong>LAN口</strong>，依旧进后台：</p>
+<ul>
+<li>修改IP地址，千万不要与主路由一样，也不要在主路由器分配的IP地址池范围内，否则会起冲突；</li>
+<li>进无线设置，为了方便连接，我们设置从路由器的<strong>SSID及连接密码</strong>均与主路由器一致，然后<strong>开启WDS功能</strong>，扫描桥接路由器，从列表中选择我们自己的主路由器，连接；注意桥接栏中的密钥信息填写的须是主路由器的密钥；</li>
+<li><strong>关闭</strong>DHCP服务器；（之前按[1]中的步骤配置，结果我搞了一个小时愣是没连通，也不要看它的WDS状态，我配置成功后反正一直给我显示的“初始化”）</li>
+</ul>
+</li>
+<li><p>重启路由器，然后不出意外就可以上网了，而且当你超出主路由器的wifi范围进入从路由器的wifi范围后，它会自行切换，非常方便：）</p>
+</li>
+</ul>
+<hr>
+<h1 id="references"><a href="#references" class="headerlink" title="references"></a>references</h1><ol>
+<li><a href="http://win7sky.com/luyouqishezhi/20130803-1053.html" target="_blank" rel="external">http://win7sky.com/luyouqishezhi/20130803-1053.html</a></li>
+<li><a href="http://jingyan.baidu.com/article/0eb457e56426f703f1a905e2.html" target="_blank" rel="external">http://jingyan.baidu.com/article/0eb457e56426f703f1a905e2.html</a></li>
+</ol>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/路由器桥接/" rel="tag">#路由器桥接</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/23/C-中常见的兄弟概念汇总/" rel="next" title="C++中常见的兄弟概念汇总">
+                <i class="fa fa-chevron-left"></i> C++中常见的兄弟概念汇总
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2017/01/23/多路由器桥接方案/" data-title="多路由器桥接方案" data-content="" data-url="http://kangzeng.win/2017/01/23/多路由器桥接方案/">
+  <div class="ds-share-inline">
+    <ul class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
 
 
           </div>
@@ -293,6 +454,13 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/23/多路由器桥接方案/" data-title="多路由器桥接方案" data-url="http://kangzeng.win/2017/01/23/多路由器桥接方案/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -312,8 +480,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Kang Zeng">
           <p class="site-author-name" itemprop="name">Kang Zeng</p>
@@ -381,6 +558,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#工具"><span class="nav-number">1.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#步骤及注意点"><span class="nav-number">2.</span> <span class="nav-text">步骤及注意点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#references"><span class="nav-number">3.</span> <span class="nav-text">references</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -484,6 +672,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
